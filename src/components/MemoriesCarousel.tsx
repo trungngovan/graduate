@@ -96,7 +96,7 @@ const MemoriesCarousel = () => {
   return (
     <section className="memories-section">
       <div className="memories-header">
-        <p className="memories-eyebrow">Nhật ký UIT · 2019-2023</p>
+        <p className="memories-eyebrow">Nhật ký HCMUS · 2021-2025</p>
         <h2 className="memories-title">Ký ức đại học qua từng khung ảnh</h2>
         <p className="memories-subtitle">
           Hành trình bốn năm đại học của mình được ghi lại qua những khoảnh khắc đáng nhớ, từ ngày nhập học

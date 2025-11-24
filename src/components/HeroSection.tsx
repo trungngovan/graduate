@@ -24,8 +24,8 @@ const HeroSection = () => {
                 <PhoneOutlined className="hero-contact-icon" />
                 <div className="hero-contact-info">
                   <span className="hero-contact-label">Liên hệ</span>
-                  <a href="tel:094612924" className="hero-contact-phone">
-                    094612924 (Trung)
+                  <a href="tel:0946129294" className="hero-contact-phone">
+                    0946129294 (Trung)
                   </a>
                 </div>
               </div>
