@@ -1,0 +1,31 @@
+.graduation-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.header-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.header-icon {
+  font-size: 2rem;
+}
+
+.header-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0;
+}
