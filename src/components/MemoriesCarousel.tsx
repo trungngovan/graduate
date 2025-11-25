@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Carousel } from 'antd';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
+import type { CarouselRef } from 'antd/es/carousel';
 import './MemoriesCarousel.css';
 
 const MEMORIES = [
@@ -91,6 +93,7 @@ const MEMORIES = [
 
 const MemoriesCarousel = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const carouselRef = useRef<CarouselRef>(null);
   const stackPreview = [1, 2].map((offset) => MEMORIES[(activeSlide + offset) % MEMORIES.length]);
 
   return (
@@ -117,7 +120,25 @@ const MemoriesCarousel = () => {
 
         <div className="memories-carousel-wrapper cinematic-frame">
           <div className="frame-glow" />
+          
+          <button 
+            className="carousel-nav-button prev" 
+            onClick={() => carouselRef.current?.prev()}
+            aria-label="Previous slide"
+          >
+            <LeftOutlined />
+          </button>
+
+          <button 
+            className="carousel-nav-button next" 
+            onClick={() => carouselRef.current?.next()}
+            aria-label="Next slide"
+          >
+            <RightOutlined />
+          </button>
+
           <Carousel
+            ref={carouselRef}
             autoplay
             autoplaySpeed={4000}
             speed={1200}
